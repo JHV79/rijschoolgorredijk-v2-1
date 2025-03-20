@@ -21,7 +21,6 @@ onMounted(() => {
     return console.error('Missing parent');
   }
   const items = parent.value?.querySelectorAll(':scope>div:has(img[src])');
-  console.log(items);
   if(items.length < 2) return;
   window.setTimeout((() => current.value++), 1000);
   timer.value = window.setInterval(() => {

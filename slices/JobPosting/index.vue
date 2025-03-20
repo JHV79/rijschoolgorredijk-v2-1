@@ -50,7 +50,7 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      children
+      innerHTML: JSON.stringify(children)
     }
   ]
 });
@@ -88,7 +88,7 @@ useHead({
         <h1>{{ slice.primary.title }}</h1>
         <p>Geplaatst: {{ dt.toLocaleDateString('nl-NL') }}</p>
       </div>
-      <prismic-rich-text class="rte" :field="slice.primary.description"></prismic-rich-text>
+      <prismic-rich-text :field="slice.primary.description"></prismic-rich-text>
     </div>
   </section>
 </template>

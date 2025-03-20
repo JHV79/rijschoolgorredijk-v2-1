@@ -49,7 +49,7 @@ defineProps(
 <template>
   <div class="user-rte pt-12 pb-16">
     <div class="bg-white py-16 px-2 lg:px-12 w-fit max-w-6xl mx-auto rounded-3xl">
-      <prismic-rich-text class="grid gap-4" :field="slice.primary.content" />
+      <prismic-rich-text :field="slice.primary.content" />
     </div>
   </div>
 </template>

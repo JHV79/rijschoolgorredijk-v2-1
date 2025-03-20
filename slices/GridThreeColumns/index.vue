@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type Content } from "@prismicio/client";
+import { type Content, asText } from "@prismicio/client";
 
 // The array passed to `getSliceComponentProps` is purely optional.
 // Consider it as a visual hint for you when templating your slice.
@@ -13,60 +13,16 @@ defineProps(
 );
 </script>
 
-<style>
-.grid-three-columns {
-  max-width: 100rem;
-  margin: 0 auto 6rem auto;
-}
-
-.grid-three-columns .grid {
-  display: grid;
-  grid-template-columns: 1fr auto 3fr;
-  gap: 2rem;
-  margin: 0 1rem;
-}
-
-.grid-three-columns .grid > h2,
-.grid-three-columns .grid .content {
-  margin-top: 2rem;
-}
-
-.grid-three-columns .grid > h2,
-.grid-three-columns .grid > h2 * {
-  font-size: 2rem;
-}
-
-.grid-three-columns .grid > h2 {
-  padding: 1rem;
-  background: #ededed;
-}
-
-.grid-three-columns .grid .content p {
-  margin-bottom: 1rem;
-}
-
-.grid-three-columns.textMiddle .grid {
-  grid-template-columns: 1fr 3fr auto;
-}
-
-.grid-three-columns.textMiddle .grid>img {
-  grid-column: 3;
-  grid-row: 1;
-}
-
-@media screen and (max-width: 70rem) {
-  .grid-three-columns .grid {
-    grid-template-columns: none;
-  }
-}
-</style>
-
 <template>
-  <section class="grid-three-columns" :class="slice.variation">
-    <div class="grid">
-      <h2><prismic-rich-text :field="slice.primary.heading"></prismic-rich-text></h2>
-      <img-ix v-if="slice.primary.image.url" :field="slice.primary.image"></img-ix>
-      <div class="content">
+  <section class="mb-24">
+    <div class="grid 2xl:grid-cols-[16rem_auto_3fr] gap-8 max-w-6xl mx-auto">
+      <h2 class="text-3xl text-white p-4 bg-shade-1">{{ asText(slice.primary.heading) }}</h2>
+      <div class="flex justify-center">
+        <nuxt-img v-if="slice.primary.image.url" :src="slice.primary.image.url"
+          :width="slice.primary.image.dimensions.width" :height="slice.primary.image.dimensions.height"
+          :alt="slice.primary.image.alt || ''" />
+      </div>
+      <div class="rte p-8 bg-white">
         <prismic-rich-text :field="slice.primary.content"></prismic-rich-text>
       </div>
     </div>

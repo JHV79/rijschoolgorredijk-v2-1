@@ -7,6 +7,18 @@
 body {
   font-family: "Poppins";
 }
+
+.rte h1 {
+  font-size: 2.5rem;
+}
+
+.rte h2 {
+  font-size: 2rem;
+}
+
+.rte h3 {
+  font-size: 2rem;
+}
 </style>
 
 <template>

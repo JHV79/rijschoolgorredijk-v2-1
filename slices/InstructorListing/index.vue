@@ -93,7 +93,7 @@ defineProps(
             <h3>{{ item.name }}</h3>
             <img-ix :field="item.image"></img-ix>
           </div>
-          <prismic-rich-text class="rte" :field="item.description"></prismic-rich-text>
+          <prismic-rich-text :field="item.description"></prismic-rich-text>
         </div>
       </div>
     </div>

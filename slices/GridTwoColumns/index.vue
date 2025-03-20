@@ -19,7 +19,7 @@ const props = defineProps(
       <nuxt-img class="md:m-8" v-if="slice.primary.image.url" :src="slice.primary.image.url"
         :width="slice.primary.image.dimensions.width" :height="slice.primary.image.dimensions.height"
         :alt="slice.primary.image.alt || ''" />
-      <div class="content">
+      <div class="rte grid gap-2">
         <prismic-rich-text :field="slice.primary.content"></prismic-rich-text>
       </div>
     </div>

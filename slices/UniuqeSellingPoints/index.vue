@@ -18,7 +18,7 @@ defineProps(
     <ul class="flex gap-8 flex-wrap lg:justify-center bg-slate-300 text-slate-900 py-12">
       <li class="flex items-center gap-2" v-for="usp in slice.items">
         <svgo-checkmark class="w-12 h-12 text-2xl md:text-3xl text-slate-900" :fontControlled="false" />
-        <prismic-rich-text class="shadow-md border-b-2 border-slate-400 xl:text-xl pb-2" :field="usp.selling_point" />
+        <prismic-rich-text :field="usp.selling_point" />
       </li>
     </ul>
   </div>
