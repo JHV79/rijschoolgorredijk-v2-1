@@ -20,8 +20,9 @@ onMounted(() => {
   if(!parent.value) {
     return console.error('Missing parent');
   }
-  const items = parent.value?.querySelectorAll(':scope>div');
-  if(items.length < 1) return;
+  const items = parent.value?.querySelectorAll(':scope>div:has(img[src])');
+  console.log(items);
+  if(items.length < 2) return;
   window.setTimeout((() => current.value++), 1000);
   timer.value = window.setInterval(() => {
     current.value = current.value === (items.length - 1) ? 0 : current.value + 1;
@@ -36,11 +37,12 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="mx-auto max-w-[100rem] flex flex-wrap justify-center py-16 2xl:gap-8">
-    <div class="p-8 max-w-[40rem]">
+    <div class="p-8 max-w-[40rem]"> 
       <h1 class="text-4xl font-bold text-shade-1 mb-8 drop-shadow-lg">{{ slice.primary.heading_1 }}</h1>
       <div class="px-4 py-8 lg:px-12">
         <h2 v-if="slice.primary.heading_2" class="text-2xl mb-8">{{ slice.primary.heading_2 }}</h2>
-        <nuxt-link :to="asLink(slice.primary.cta_link) || '#unresolved'" class="bg-shade-1 inline-block text-center text-2xl text-white p-4 lg:px-12 rounded-lg">{{ slice.primary.cta_text }}</nuxt-link>
+        <!-- @vue-expect-error -->
+        <nuxt-link v-if="slice.primary.cta_link?.url" :to="asLink(slice.primary.cta_link) || '#unresolved'" class="bg-shade-1 inline-block text-center text-2xl text-white p-4 lg:px-12 rounded-lg">{{ slice.primary.cta_text }}</nuxt-link>
       </div>
     </div>
     <div class="grid overflow-hidden" ref="parent">
@@ -52,7 +54,6 @@ onBeforeUnmount(() => {
           height="770"
           fit="contain"
         />
-        <p>{{ current }}</p>
       </div>
     </div>
   </div>
