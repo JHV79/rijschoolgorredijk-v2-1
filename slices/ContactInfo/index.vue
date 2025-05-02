@@ -25,7 +25,7 @@ defineProps(
       <div>
         <h2 class="text-4xl mb-3">Rijschool Gorredijk</h2>
         <h2 class="text-4xl">Rijschool Akkrum e.o.</h2>
-        <div class="grid bg-white my-8 p-8 text-emerald-400 lg:text-2xl">
+        <div class="grid bg-white my-8 p-8 lg:text-2xl">
           <p class="grid grid-cols-[1rem_1fr] gap-4 items-center py-2">
             <svgo-home class="text-shade-1"></svgo-home>
             <span>{{ settings?.data.street_address }}</span>
