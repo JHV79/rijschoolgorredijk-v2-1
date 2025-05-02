@@ -102,5 +102,8 @@ export default defineNuxtConfig({
     routes: [
       '/contact-test'
     ]
+  },
+  nitro: {
+    preset: 'netlify'
   }
 })
