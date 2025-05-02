@@ -36,20 +36,20 @@ defineProps(
           </p>
           <nuxt-link :to="`tel:${settings?.data.telephone}`" class="grid grid-cols-[1rem_1fr] gap-4 items-center py-2">
             <svgo-phone class="text-shade-1"></svgo-phone>
-            <span class="underline">{{ slice.primary.telephone_text }}</span>
+            <span class="underline break-all">{{ slice.primary.telephone_text }}</span>
           </nuxt-link>
           <nuxt-link :to="`https://wa.me/${settings?.data.telephone}`"
             class="grid grid-cols-[1rem_1fr] gap-4 items-center py-2">
             <svgo-whatsapp class="text-shade-1"></svgo-whatsapp>
-            <span class="underline">{{ slice.primary.whatsapp_text }}</span>
+            <span class="underline break-all">{{ slice.primary.whatsapp_text }}</span>
           </nuxt-link>
           <nuxt-link :to="`mailto:${settings?.data.email}`" class="grid grid-cols-[1rem_1fr] gap-4 items-center py-2">
             <svgo-envelope class="text-shade-1"></svgo-envelope>
-            <span class="underline">{{ settings?.data.email }}</span>
+            <span class="underline break-all">{{ settings?.data.email }}</span>
           </nuxt-link>
           <nuxt-link :to="`mailto:info@rijschoolakkrum.nl`" class="grid grid-cols-[1rem_1fr] gap-4 items-center py-2">
             <svgo-envelope class="text-shade-1"></svgo-envelope>
-            <span class="underline">info@rijschoolakkrum.nl</span>
+            <span class="underline break-all">info@rijschoolakkrum.nl</span>
           </nuxt-link>
         </div>
         <div class="grid gap-2">
