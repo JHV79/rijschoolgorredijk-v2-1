@@ -1,9 +1,5 @@
 {
   "id": "global_settings",
-  "label": "Global settings",
-  "format": "custom",
-  "repeatable": false,
-  "status": true,
   "json": {
     "Main": {
       "uid": {
@@ -122,5 +118,9 @@
         }
       }
     }
-  }
+  },
+  "label": "Global settings",
+  "repeatable": false,
+  "status": true,
+  "format": "custom"
 }
