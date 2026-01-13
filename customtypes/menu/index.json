@@ -1,9 +1,5 @@
 {
   "id": "menu",
-  "label": "Menu",
-  "format": "custom",
-  "repeatable": false,
-  "status": true,
   "json": {
     "Main": {
       "uid": {
@@ -37,5 +33,9 @@
         }
       }
     }
-  }
+  },
+  "label": "Menu",
+  "repeatable": false,
+  "status": true,
+  "format": "custom"
 }

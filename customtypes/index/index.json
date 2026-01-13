@@ -1,9 +1,5 @@
 {
   "id": "index",
-  "label": "Index",
-  "format": "page",
-  "repeatable": false,
-  "status": true,
   "json": {
     "Main": {
       "uid": {
@@ -82,5 +78,9 @@
         "type": "Text"
       }
     }
-  }
+  },
+  "label": "Index",
+  "repeatable": false,
+  "status": true,
+  "format": "page"
 }

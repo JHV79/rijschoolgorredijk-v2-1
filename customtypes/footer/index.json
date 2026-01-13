@@ -1,9 +1,5 @@
 {
   "id": "footer",
-  "label": "Footer",
-  "format": "custom",
-  "repeatable": false,
-  "status": true,
   "json": {
     "Main": {
       "uid": {
@@ -93,5 +89,9 @@
         }
       }
     }
-  }
+  },
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "format": "custom"
 }

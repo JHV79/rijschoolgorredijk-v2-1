@@ -5,29 +5,27 @@
   "license": "Apache-2.0",
   "author": "Prismic <contact@prismic.io> (https://prismic.io)",
   "scripts": {
-    "dev": "concurrently \"npm:nuxt:dev\" \"npm:slicemachine\" --names \"nuxt,slicemachine\" --prefix-colors green,magenta",
-    "nuxt:dev": "nuxt dev",
+    "dev": "nuxt dev",
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "slicemachine": "start-slicemachine",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "slicemachine": "start-slicemachine"
   },
   "devDependencies": {
-    "@nuxt/fonts": "^0.11.0",
+    "@nuxt/fonts": "^0.12.1",
     "@nuxt/image": "^1.10.0",
-    "@nuxtjs/prismic": "^4.1.0",
-    "@nuxtjs/tailwindcss": "^6.13.2",
-    "@slicemachine/adapter-nuxt": "^0.3.70",
-    "concurrently": "^9.1.2",
-    "nuxt": "^3.17.1",
-    "nuxt-svgo": "^4.0.16",
-    "slice-machine-ui": "^2.14.0"
+    "@nuxtjs/prismic": "^5.0.0",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@prismicio/client": "^7.21.3",
+    "@slicemachine/adapter-nuxt": "^0.3.93",
+    "nuxt": "^4.2.2",
+    "nuxt-svgo": "^4.2.6",
+    "slice-machine-ui": "^2.20.5",
+    "vue": "^3.5.26"
   },
   "dependencies": {
-    "fast-xml-parser": "^5.0.9",
-    "schema-dts": "^1.1.5",
-    "zod": "^3.24.2"
+    "schema-dts": "^1.1.5"
   }
 }

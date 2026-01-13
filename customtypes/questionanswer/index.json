@@ -1,9 +1,5 @@
 {
   "id": "questionanswer",
-  "label": "QuestionAnswer",
-  "format": "custom",
-  "repeatable": true,
-  "status": true,
   "json": {
     "Main": {
       "uid": {
@@ -37,5 +33,9 @@
         }
       }
     }
-  }
+  },
+  "label": "QuestionAnswer",
+  "repeatable": true,
+  "status": true,
+  "format": "custom"
 }
