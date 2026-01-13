@@ -42,7 +42,7 @@ export default defineNuxtConfig({
   },
 
   modules: ['@nuxtjs/tailwindcss', "@nuxtjs/prismic", '@nuxt/image', 'nuxt-svgo', '@nuxt/fonts'],
-  
+
   tailwindcss: {
     config: {
       theme: {
@@ -69,6 +69,9 @@ export default defineNuxtConfig({
 
   prismic: {
     endpoint: repositoryName,
-    provider: 'prismic'
+  },
+
+  image: {
+    prismic: {}
   }
 })
