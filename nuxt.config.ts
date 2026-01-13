@@ -68,6 +68,7 @@ export default defineNuxtConfig({
   },
 
   prismic: {
-    endpoint: repositoryName
+    endpoint: repositoryName,
+    provider: 'prismic'
   }
 })
