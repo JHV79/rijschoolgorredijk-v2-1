@@ -64,7 +64,7 @@ onBeforeUnmount(() => {
         <nuxt-link v-if="'url' in slice.primary.cta_link" :to="asLink(slice.primary.cta_link) || '#unresolved'" class="bg-shade-1 inline-block text-center text-2xl text-white p-4 lg:px-12 rounded-lg">{{ slice.primary.cta_text }}</nuxt-link>
       </div>
     </div>
-    <div class="2xl:max-w-4xl 2xl:mr-auto grid items-center" ref="parent">
+    <div class="2xl:max-w-4xl 2xl:mr-auto grid items-center order-first 2xl:order-last" ref="parent">
       <div class="col-start-1 row-start-1 transition-all duration-[2s]"
         :class="[current === index ? 'opacity-100' : 'opacity-0']" v-for="(img, index) in imgs" :key="img.url">
         <nuxt-img sizes="100vw sm:640px md:758px lg:1024px" class="w-full h-auto rounded-lg" :src="img.url" :alt="img.alt" :width="img.width" :height="img.height"

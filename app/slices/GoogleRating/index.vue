@@ -41,7 +41,7 @@ const ratings = computed(() => {
         </span>
       </div>
       <div class="grid justify-center">
-        <p class="text-xl text-green-500">{{ slice.primary.rating }}</p>
+        <p class="text-xl text-green-500">{{ slice.primary.rating }} sterren</p>
         <p class="count flex items-center gap-2">Aantal beoordelingen: <span class="text-xl text-green-500 font-bold">{{ slice.primary.review_amount || 'Tijdelijk niet beschikbaar' }}</span></p>
         <p class="text">{{ slice.primary.subtext }}</p>
       </div>
