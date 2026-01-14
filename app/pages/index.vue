@@ -41,15 +41,6 @@ const children: WithContext<LocalBusiness> = {
 }
 
 useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      textContent: JSON.stringify(children)
-    }
-  ]
-});
-
-useHead({
   title: () => page.value?.data.meta_title || 'Rijschool Gorredijk - Rijlessen voor auto, motor en scooter',
   meta: [
     {
@@ -57,6 +48,18 @@ useHead({
       content: () => page.value?.data.meta_description || 'Rijschool Gorredijk biedt rijlessen voor auto, motor en scooter in Gorredijk en omgeving. Professionele instructeurs en flexibele lespakketten.',
     },
   ],
+  link: [
+    {
+      rel: 'canonical',
+      href: 'https://rijschoolgorredijk.nl/',
+    }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      textContent: JSON.stringify(children)
+    }
+  ]
 });
 </script>
 

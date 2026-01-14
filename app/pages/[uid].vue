@@ -15,6 +15,12 @@ useHead({
       content: page.value?.data.meta_description,
     },
   ],
+  link: [
+    {
+      rel: 'canonical',
+      href: `https://rijschoolgorredijk.nl/${params.uid}/`,
+    }
+  ],
 });
 </script>
 

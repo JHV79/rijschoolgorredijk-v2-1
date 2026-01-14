@@ -37,6 +37,11 @@ export default defineNuxtConfig({
           href: 'https://images.prismic.io/',
           crossorigin: ''
         },
+        {
+          rel: 'sitemap',
+          type: 'application/xml',
+          href: 'https://rijschoolgorredijk.nl/api/sitemap',
+        }
       ],
     },
   },
