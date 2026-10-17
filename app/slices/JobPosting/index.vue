@@ -88,7 +88,8 @@ useHead({
         <h1>{{ slice.primary.title }}</h1>
         <p>Geplaatst: {{ dt.toLocaleDateString('nl-NL') }}</p>
       </div>
-      <prismic-rich-text :field="slice.primary.description"></prismic-rich-text>
+      <Rte :field="slice.primary.description"></Rte>
+      <!-- <prismic-rich-text :field="slice.primary.description"></prismic-rich-text> -->
     </div>
   </section>
 </template>
