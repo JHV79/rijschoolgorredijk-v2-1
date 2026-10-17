@@ -17,6 +17,10 @@ const current = ref(0);
 const parent = ref<HTMLDivElement | null>(null);
 const count = computed(() => parent.value?.querySelectorAll('img').length || 0);
 const imgs = computed(() => {
+  if (!slice.items || !slice.items.length) {
+    console.warn('Hero slice is missing items');
+    return [];
+  }
   const items: { url: string, alt: string, width: number, height: number, duration: number }[] = [];
   slice.items.filter(item => item.image?.url).forEach(item => {
     items.push({

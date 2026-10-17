@@ -39,12 +39,6 @@ const { data: footer } = await useAsyncData('app-footer', () =>
           <svgo-envelope class="text-shade-1 hidden sm:block"></svgo-envelope>
           <span class="underline">{{ footer?.data?.email_text }}</span>
         </nuxt-link>
-        <nuxt-link
-          class="font-semibold text-lg flex items-center gap-4 hover:scale-105 transition-transform duration-500 origin-bottom"
-          to="mailto:info@rijschoolakkrum.nl">
-          <svgo-envelope class="text-shade-1 hidden sm:block"></svgo-envelope>
-          <span class="underline">info@rijschoolakkrum.nl</span>
-        </nuxt-link>
         <h4 class="pt-8 font-semibold">Bereikbaarheid</h4>
         <div class="opening-hours">
           <prismic-rich-text :field="footer?.data?.opening_hours"></prismic-rich-text>
@@ -63,41 +57,5 @@ const { data: footer } = await useAsyncData('app-footer', () =>
       <p>KvK 86570358</p>
       <p>CBR 2086N2</p>
     </div>
-    <!--
-    <div class="contact-info-wrapper">
-      <div class="top">
-        <section class="left">
-          <h3>Neem contact op</h3>
-          <p class="small">De Buorren 21 8408 HG Lippenhuizen (FR)</p>
-          <nuxt-link :to="footer?.data?.telephone_link?.url || '#'">
-            <svgo-phone></svgo-phone>
-            <span>{{ footer?.data?.telephone_text }}</span>
-          </nuxt-link>
-          <nuxt-link :to="footer?.data?.email_link?.url || '#'">
-            <svgo-envelope></svgo-envelope>
-            <span>{{ footer?.data?.email_text }}</span>
-          </nuxt-link>
-          <nuxt-link to="mailto:info@rijschoolakkrum.nl">
-            <svgo-envelope></svgo-envelope>
-            <span>info@rijschoolakkrum.nl</span>
-          </nuxt-link>
-          <h4>Bereikbaarheid</h4>
-          <div class="opening-hours">
-            <prismic-rich-text :field="footer?.data?.opening_hours"></prismic-rich-text>
-          </div>
-        </section>
-        <section class="right">
-          <nuxt-img :src="footer?.data.image.url || ''" :alt="footer?.data.image.alt || ''"
-            :width="footer?.data.image.dimensions?.width" :height="footer?.data.image.dimensions?.height" />
-        </section>
-      </div>
-    </div>
-    <div class="bottom-wrapper">
-      <nuxt-link :to="footer?.data?.termsconditions?.url || '#'">Algemene voorwaarden</nuxt-link>
-      <nuxt-link :to="footer?.data?.privacystatement?.url || '#'">Privacy</nuxt-link>
-      <p>© Rijschool Gorredijk {{ new Date().getFullYear() }}</p>
-      <p>KvK 86570358</p>
-      <p>CBR 2086N2</p>
-    </div> -->
   </footer>
 </template>

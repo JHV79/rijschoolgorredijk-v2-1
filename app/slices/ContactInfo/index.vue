@@ -24,7 +24,6 @@ defineProps(
       <h1 class="text-3xl font-bold lg:text-5xl text-shade-1">Contact</h1>
       <div>
         <h2 class="text-4xl mb-3">Rijschool Gorredijk</h2>
-        <h2 class="text-4xl">Rijschool Akkrum e.o.</h2>
         <div class="grid bg-white my-8 p-8 lg:text-2xl">
           <p class="grid grid-cols-[1rem_1fr] gap-4 items-center py-2">
             <svgo-home class="text-shade-1"></svgo-home>
@@ -46,10 +45,6 @@ defineProps(
           <nuxt-link :to="`mailto:${settings?.data.email}`" class="grid grid-cols-[1rem_1fr] gap-4 items-center py-2">
             <svgo-envelope class="text-shade-1"></svgo-envelope>
             <span class="underline break-all">{{ settings?.data.email }}</span>
-          </nuxt-link>
-          <nuxt-link :to="`mailto:info@rijschoolakkrum.nl`" class="grid grid-cols-[1rem_1fr] gap-4 items-center py-2">
-            <svgo-envelope class="text-shade-1"></svgo-envelope>
-            <span class="underline break-all">info@rijschoolakkrum.nl</span>
           </nuxt-link>
         </div>
         <div class="grid gap-2">
