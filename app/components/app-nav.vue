@@ -49,7 +49,7 @@ const menu = computed(() => {
     <nav class="fixed z-10 top-0 left-0 w-full">
       <div class="relative flex items-center p-4 lg:justify-around w-fit mx-auto">
         <nuxt-link class="mr-8 hover hover:scale-125 transition-transform ease-bouncy duration-700" to="/" @click="open = false">
-          <svgo-logo-v2 aria-hidden="true" :fontControlled="false" :filled="true" class="max-w-48 w-full h-auto lg:w-64 stroke-slate-300 bg-white bg-opacity-50 rounded-lg" />
+          <svgo-logo aria-hidden="true" :fontControlled="false" :filled="true" class="max-w-48 w-full h-auto lg:w-64 stroke-slate-300 bg-white bg-opacity-50 rounded-lg" />
           <span class="sr-only">Home</span>
         </nuxt-link>
         <button @click="open = !open" class="bg-white grid gap-1 p-2 rounded-lg ml-auto lg:hidden" aria-controls="main-menu" :aria-expanded="open">
